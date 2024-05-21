@@ -1,6 +1,6 @@
 The easiest way to generate Angular files using schematics!
 
-![Animation]()
+![Animation](https://github.com/Iancovski/new-angular-schematic/blob/main/assets/animation.gif?raw=true)
 
 # How to use
 
