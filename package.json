@@ -1,0 +1,74 @@
+{
+  "name": "new-angular-schematic",
+  "displayName": "New Angular Schematic",
+  "description": "Generate Angular files using schematics directly from the context menu.",
+  "version": "1.0.0",
+  "icon": "./assets/icon.png",
+  "publisher": "Iancovski",
+  "homepage": "https://github.com/Iancovski/new-angular-schematic",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "schematic",
+    "schematics",
+    "generate",
+    "create",
+    "component"
+  ],
+  "author": {
+    "name": "Vinícius Iancovski",
+    "email": "iancovski.vinicius@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Iancovski/new-angular-schematic.git"
+  },
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+          "command": "new-angular-schematic.newAngularSchematic",
+          "title": "New Angular Schematic..."
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "new-angular-schematic.newAngularSchematic",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation@7"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npx eslint",
+    "lint": "npx eslint ./src --fix",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.89.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "globals": "^15.2.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.9.0"
+  }
+}
