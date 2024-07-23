@@ -1,7 +1,9 @@
 export const schematics = [
-    'application', 
+    'app-shell',
+    'application',
     'class',
     'component',
+    'config',
     'directive',
     'enum',
     'environments',
@@ -13,5 +15,13 @@ export const schematics = [
     'pipe',
     'resolver',
     'service',
+    'service-worker',
     'web-worker'
+];
+
+export const singleSchematics = [
+    'app-shell',
+    'config',
+    'environments',
+    'service-worker'
 ];
