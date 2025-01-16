@@ -19,7 +19,7 @@ export const schematics = [
     'web-worker'
 ];
 
-export const singleSchematics = [
+export const coreSchematics = [
     'app-shell',
     'config',
     'environments',
